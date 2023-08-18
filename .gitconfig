@@ -1,0 +1,8 @@
+[core]
+        quotepath = false
+        autocrlf = input
+[user]
+        name = fun-raspiXX
+        email = git@azurata.me
+[credential]
+        helper = store
