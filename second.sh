@@ -2,6 +2,8 @@
 
 cd ~
 
+cp ~/raspike-scripts/.gitconfig ~/.gitconfig
+
 mkdir work
 cd work
 
