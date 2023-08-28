@@ -3,6 +3,6 @@
         autocrlf = input
 [user]
         name = fun-raspiXX
-        email = git@azurata.me
+        email = etrobo.fun@example.com
 [credential]
         helper = store
