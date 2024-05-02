@@ -1,11 +1,19 @@
-# raspike-setup
+# raspike-scripts
 
-## Usage "install-*.sh"
+## Usage
 
-1. Run `sh first.sh` on Raspberry Pi, and it be reboot
-1. After reboot, run `sh second.sh`
-    - When reqired GitHub password, use Personal Access Token
+```console
+$ cd ~
+$ git clone https://github.com/etrobo-fun/raspike-scripts.git
+```
 
-## Note
+## About `t_stddef.h.patch`
 
-Maybe this repo will be dotfiles for Raspberry Pi.
+RasPike-env has a problem about compile C++ program.
+
+Using this patch, resolve the problem.
+
+```console
+$ patch ~/work/RasPike/include/t_stddef.h raspike-scripts/t_stddef.h.patch
+```
+
