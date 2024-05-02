@@ -1,0 +1,20 @@
+--- t_stddef.h.old	2024-05-02 16:44:56.805382070 +0100
++++ t_stddef.h	2024-05-02 16:43:33.616703693 +0100
+@@ -212,6 +212,8 @@ typedef	struct acvct {				/* アクセ�
+  *  以下のALIGN_TYPEの定義は，アラインメントの単位が2の巾乗であることを
+  *  仮定している．
+  */
++#ifndef __cplusplus
++
+ #ifndef offsetof
+ #define	offsetof(structure, field) \
+ 		((uintptr_t)(((char *) &(((structure *) 0)->field)) - ((char *) 0)))
+@@ -221,6 +223,8 @@ typedef	struct acvct {				/* アクセ�
+ #define alignof(type)	offsetof(struct { char field1; type field2; }, field2)
+ #endif /* alignof */
+ 
++#endif /* __cplusplus */
++
+ #ifndef ALIGN_TYPE				/* アラインメントのチェック */
+ #define ALIGN_TYPE(addr, type) \
+ 						((((uintptr_t)(addr)) & (alignof(type) - 1)) == 0U)
